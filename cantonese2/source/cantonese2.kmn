@@ -1,0 +1,34 @@
+﻿store(&Version) "17.0"
+c Ce clavier est pour une utilisation avec Keyman 17.0
+store(&Name) "Cantonese Phoneme"
+store(&Bitmap) "cantonese.ico"
+store(&MnemonicLayout) "1"
+
+group(main) using keys
+c Ce clavier utilise une disposition mnémotechnique.
+store(&TARGETS) 'any'
+
+begin Unicode > use(main)
+
+c Règles pour les phonèmes
+"n" + "g" > "ŋ"   c Entrée “ng” produit [ŋ]
+"t" + "_" > "t̪"   c Entrée “t_” produit [t̪]
+"t" + "s" > "t͡s"   c Entrée “ts” produit [t͡s]
+"t" + "h" > "t̪ʰ"   c Entrée “th” produit [t̪ʰ]
+"s" + "h" > "t͡sʰ"   c Entrée “sh” produit [t͡sʰ]
+"l" + "_" > "ɬ"   c Entrée “l_” produit [ɬ]
+
+c Règles pour les nouveaux phonèmes
+"o" + "e" > "œ"   c Entrée “oe” produit [œ]
+"o" + "_" > "ɵ"   c Entrée “o_” produit [ɵ]
+"a" + "_" > "ɐ"   c Entrée “a_” produit [ɐ]
+
+c Règles pour les symboles tonals
+"t" + "1" > "˥"   c Entrée “t1” produit [˥] (ton élevé)
+"t" + "2" > "˥˩"   c Entrée “t2” produit [˥˩] (ton élevé-descendant)
+"t" + "3" > "˩˥"   c Entrée “t3” produit [˩˥] (ton descendant-élevé)
+"t" + "4" > "˧"   c Entrée “t4” produit [˧] (ton moyen)
+"t" + "5" > "˩"   c Entrée “t5” produit [˩] (ton bas)
+"t" + "6" > "˩˧"   c Entrée “t6” produit [˩˧] (ton bas-moyen)
+
+
